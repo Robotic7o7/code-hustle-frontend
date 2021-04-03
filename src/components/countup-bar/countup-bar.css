@@ -1,0 +1,49 @@
+.count-up-bar{
+    height:30vh;
+    width:60vw;
+    background-color:#fff;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-bottom:5px solid #38C5FB;
+    border-radius:4px;
+}
+
+.count-up-area{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    height:100%;
+    width:33%;
+    background-color:#fff;
+}
+
+.count-label{
+    display:flex;
+    width:100%;
+    text-align:center;
+    justify-content: center;
+    align-items:center;
+    font-family: "KeepCalm", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 120px;
+    color: #38C5FB;
+}
+
+.count-text-label{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    text-align:center;
+    font-family: "KeepCalm", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 36px;
+color: #2FEC4F;
+}

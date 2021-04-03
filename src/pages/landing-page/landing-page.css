@@ -1,6 +1,7 @@
 .landing-page{
     width:100%;
     height:auto;
+    background-color:#fff;
 }
 
 .landing-jumbotron{
@@ -66,3 +67,109 @@
     line-height: 47px;
     color: #FFFFFF;
 }
+
+.landing-countup-container{
+    display:grid;
+    place-items:center;
+    height:40vh;
+    width:100%;
+    background-color:#fff;
+}
+
+.rules-regulations-section{
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    background-color:#fff
+}
+
+.rules-heading{
+    width:100%;
+    display:block;
+    text-align:center;
+    font-family: "KeepCalm", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #2FB8EC;
+    position:relative;
+    top:0vh;
+}
+
+.rules-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    height:auto;
+    width:80%;
+    position:relative;
+    top:5vh;
+}
+
+.rules-text{
+    font-family: "Montserrat", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 40px;
+color: #434343;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #1CE95A;
+    ; /* Change the color */
+    transform:scale(1.5);
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+  .footer{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+      height:8vh;
+      width:100%;
+      background-color:#414141;
+  }
+
+  .smp-links-container{
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      height:6vh;
+      width:15vw;
+  }
+
+  .footer-signature{
+        display:flex;
+    justify-content: center;
+    align-items:center;
+      text-align:center;
+      height:3vh;
+      width:100%;
+      margin-top:2vh;
+      font-family: "KeepCalm", sans-serif;
+      font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    color: #989898;
+  }
+
+  .smpicons{
+      height:5vh;
+      width:5vw;
+      color:#fff;
+  }
