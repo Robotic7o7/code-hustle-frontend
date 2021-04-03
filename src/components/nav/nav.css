@@ -1,0 +1,58 @@
+.nav-bar{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    height:80px;
+    width:100%;
+    background-color:#fff;
+}
+
+.nav-bar-left-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    height:100%;
+    width: 30%;
+    
+    margin-left:20px;
+}
+.nav-bar-right-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    height:100%;
+    width: 40%;
+    
+    margin-right:20px;
+}
+
+.cs-logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:270px;
+    height:auto;
+    transform:scale(0.8);
+    image-rendering: crisp-edges;
+}
+
+.sb-logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:80px;
+    height:80px;
+    image-rendering: crisp-edges;
+}
+
+.nav-links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:"Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #171717;
+}

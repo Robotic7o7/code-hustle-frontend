@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'KeepCalm';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/KeepCalm-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: 'MonotypeCorsiva';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/MTCORSVA.TTF'); 
+}
+
+@font-face {
+  font-family: 'Consolas';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/Consolas.ttf'); 
+}
+
+
+*{
+  box-sizing:border-box;
+}
+
+
+body {
+  background-color:#000;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
