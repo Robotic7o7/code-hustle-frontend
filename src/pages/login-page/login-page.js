@@ -48,7 +48,7 @@ function LoginPage(props) {
                         localStorage.setItem('team_name', data.teamName)
                         localStorage.setItem('team_wallet', data.teamWallet)
                         props.setDisplayName(data.teamName)
-                        // window.location.href = "/home"
+                        window.location.href = "/home"
                     }
 
                     else {
