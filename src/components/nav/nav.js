@@ -9,26 +9,26 @@ function Nav(props) {
 
 
 
-    // useEffect(() => {
-    //     fetch(`http://128.199.17.29:3000/teams/wallet/${teamIDNav}`, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         // body: JSON.stringify({
-    //         //     teamCode: name,
-    //         //     passKey: passKey
-    //         // }),
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             props.setWallet(data)
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error:', error);
-    //         });
-    // }, [])
+    useEffect(() => {
+        fetch(`http://128.199.17.29:3000/teams/wallet/${teamIDNav}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            // body: JSON.stringify({
+            //     teamCode: name,
+            //     passKey: passKey
+            // }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                props.setWallet(data.teamWallet);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }, [])
 
 
 

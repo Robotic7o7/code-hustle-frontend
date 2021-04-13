@@ -29,8 +29,14 @@ function BidPage(props) {
             .then(data => {
                 console.log("wallet amount from bid page" + data);
                 var updatedAmount = parseInt(data) - parseInt(bidValue)
-                var finalAmount = updatedAmount.toString();
-                updateWallet(finalAmount)
+                if (updatedAmount > 0) {
+                    var finalAmount = updatedAmount.toString();
+                    updateWallet(finalAmount)
+                }
+                else {
+                    alert("Oops! seems like you're broke. You have insufficient coins, bid cannot be placed");
+                }
+
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -54,10 +60,40 @@ function BidPage(props) {
                 if (data.message != "failed") {
                     props.setWallet(amount);
                     console.log("wallet amount updated");
+                    saveBid();
+                    alert("Bid Saved, Question number " + questionNo + " Bid Value: " + bidValue)
                 }
 
                 else {
                     alert("Invalid team code or pass key. Please try again!")
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+
+    function saveBid() {
+        fetch('http://128.199.17.29:3000/bid/new', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('authToken')
+            },
+            body: JSON.stringify({
+                teamCode: props.displayName,
+                questionNo: questionNo,
+                bidAmount: bidValue
+            }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message != "failed") {
+                    console.log(data)
+                }
+                else {
+                    alert("Server Error, bid not saved. Relogin")
                 }
             })
             .catch((error) => {
@@ -78,33 +114,7 @@ function BidPage(props) {
         }
 
         if (validated == 1) {
-            fetch('http://128.199.17.29:3000/bid/new', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + localStorage.getItem('authToken')
-                },
-                body: JSON.stringify({
-                    teamCode: props.displayName,
-                    questionNo: questionNo,
-                    bidAmount: bidValue
-                }),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.message != "failed") {
-                        console.log(data)
-                        calcWallet();
-                        alert("Bid Saved, Question number " + questionNo + " Bid Value: " + bidValue)
-                    }
-                    else {
-                        alert("Server Error, bid not saved. Relogin")
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-
+            calcWallet();
         }
     }
 
