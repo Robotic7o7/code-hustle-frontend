@@ -7,8 +7,6 @@ import { useState, useEffect } from "react"
 function Nav(props) {
     var teamIDNav = localStorage.getItem("team_id")
 
-
-
     useEffect(() => {
         fetch(`http://128.199.17.29:3000/teams/wallet/${teamIDNav}`, {
             method: 'GET',

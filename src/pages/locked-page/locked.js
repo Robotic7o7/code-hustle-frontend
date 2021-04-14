@@ -6,9 +6,9 @@ import "./locked.css"
 
 function LockedPage() {
 
-    // useEffect(() => {
-    //     var timeout = setTimeout(redirectFeedback, 15000);
-    // }, [])
+    useEffect(() => {
+        var timeout = setTimeout(redirectFeedback, 15000);
+    }, [])
 
     function redirectFeedback() {
         window.location.href = "https://instagram.com";
