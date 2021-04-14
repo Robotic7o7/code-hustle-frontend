@@ -35,6 +35,7 @@ function BidPage(props) {
                 }
                 else {
                     alert("Oops! seems like you're broke. You have insufficient coins, bid cannot be placed");
+                    window.location.href = "/locked";
                 }
 
             })
@@ -59,6 +60,7 @@ function BidPage(props) {
             .then(data => {
                 if (data.message != "failed") {
                     props.setWallet(amount);
+                    localStorage.setItem("team_wallet", amount);
                     console.log("wallet amount updated");
                     saveBid();
                     alert("Bid Saved, Question number " + questionNo + " Bid Value: " + bidValue)
@@ -134,14 +136,15 @@ function BidPage(props) {
                     <img src="/sb_white_logo 1.png" className="bid-logo"></img>
                     <br />
                     <label className='bid-page-title'>CODE HUSTLE 2.0</label>
-                </div>
-                <div className="bid-section-bottom">
                     <div className="bid-box">
                         <input className="bid-input-field" value={props.displayName} readonly />
                         <input className="bid-input-field" placeholder="ENTER QUESTION NUMBER" id="question" onChange={e => { e.preventDefault(); setQuestionNo(e.target.value); revertStyle() }} />
                         <input className="bid-input-field" placeholder="ENTER BID VALUE" id="bid" onChange={e => { e.preventDefault(); setBidValue(e.target.value); revertStyle() }} />
                         <button className="bid-button" onClick={submitBid}>BID</button>
                     </div>
+                </div>
+                <div className="bid-section-bottom">
+
                 </div>
                 <div className="bid-footer">
                     <label className="bid-footer-label">IEEE - VBIT SB | 2020 - 2021</label>

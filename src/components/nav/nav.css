@@ -61,3 +61,268 @@
     color: #171717;
     text-decoration:none;
 }
+
+@media only screen and (min-width:768px){
+    .nav-bar{
+        display:flex;
+        flex-direction:row;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        justify-content: space-between;
+        height:80px;
+        width:100%;
+        background-color:#fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .nav-bar-left-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 25%;
+        
+        margin-left:15px;
+    }
+    .nav-bar-right-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 40%;
+        margin-right:15px;
+    }
+    
+    .cs-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:270px;
+        height:auto;
+        transform:scale(0.5);
+        image-rendering: crisp-edges;
+    }
+    
+    .sb-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:60px;
+        height:60px;
+        margin-top:10px;
+        image-rendering: crisp-edges;
+    }
+    
+    .nav-links{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-family:"Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 30px;
+        color: #171717;
+        text-decoration:none;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .nav-bar{
+        display:flex;
+        flex-direction:row;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        justify-content: space-between;
+        height:80px;
+        width:100%;
+        background-color:#fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .nav-bar-left-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 30%;
+        
+        margin-left:20px;
+    }
+    .nav-bar-right-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 40%;
+        margin-right:20px;
+    }
+    
+    .cs-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:270px;
+        height:auto;
+        transform:scale(0.6);
+        image-rendering: crisp-edges;
+    }
+    
+    .sb-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:60px;
+        height:60px;
+        margin-top:10px;
+        image-rendering: crisp-edges;
+    }
+    
+    .nav-links{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-family:"Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        color: #171717;
+        text-decoration:none;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .nav-bar{
+        display:flex;
+        flex-direction:row;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        justify-content: space-between;
+        height:80px;
+        width:100%;
+        background-color:#fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .nav-bar-left-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 30%;
+        
+        margin-left:20px;
+    }
+    .nav-bar-right-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 40%;
+        margin-right:20px;
+    }
+    
+    .cs-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:270px;
+        height:auto;
+        transform:scale(0.6);
+        image-rendering: crisp-edges;
+    }
+    
+    .sb-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:60px;
+        height:60px;
+        margin-top:10px;
+        image-rendering: crisp-edges;
+    }
+    
+    .nav-links{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-family:"Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        color: #171717;
+        text-decoration:none;
+    }
+}
+
+
+@media only screen and (min-width:1440px){
+    .nav-bar{
+        display:flex;
+        flex-direction:row;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        justify-content: space-between;
+        height:80px;
+        width:100%;
+        background-color:#fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    }
+    
+    .nav-bar-left-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 30%;
+        
+        margin-left:20px;
+    }
+    .nav-bar-right-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        height:100%;
+        width: 40%;
+        margin-right:20px;
+    }
+    
+    .cs-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:270px;
+        height:auto;
+        transform:scale(0.6);
+        image-rendering: crisp-edges;
+    }
+    
+    .sb-logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:60px;
+        height:60px;
+        margin-top:10px;
+        image-rendering: crisp-edges;
+    }
+    
+    .nav-links{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-family:"Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 30px;
+        color: #171717;
+        text-decoration:none;
+    }
+}

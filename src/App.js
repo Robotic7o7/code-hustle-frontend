@@ -7,6 +7,7 @@ import LandingPage from './pages/landing-page/landing-page';
 import LoginPage from './pages/login-page/login-page';
 import BidPage from './pages/bid-page/bid';
 import LeaderBoard from './pages/leader-board/leader-board';
+import LockedPage from './pages/locked-page/locked';
 
 
 
@@ -68,6 +69,9 @@ function App() {
 
               setDisplayName={setDisplayName}
             />
+          </Route>
+          <Route path="/locked">
+            <LockedPage />
           </Route>
         </Switch>
       </Router>

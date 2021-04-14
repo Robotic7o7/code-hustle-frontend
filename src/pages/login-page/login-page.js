@@ -78,13 +78,14 @@ function LoginPage(props) {
                     <img src="/sb_white_logo 1.png" className="login-logo"></img>
                     <br />
                     <label className='login-page-title'>CODE HUSTLE 2.0</label>
-                </div>
-                <div className="login-section-bottom">
                     <div className="login-box">
                         <input className="login-input-field" id="name" placeholder="ENTER TEAM NAME" onChange={e => { e.preventDefault(); setName(e.target.value); revertStyle() }} />
                         <input className="login-input-field" id="passKey" placeholder="ENTER PASS KEY" onChange={e => { e.preventDefault(); setPassKey(e.target.value); revertStyle() }} />
                         <button className="submit-button" onClick={Submit}>LOGIN</button>
                     </div>
+                </div>
+                <div className="login-section-bottom">
+
                 </div>
                 <div className="login-footer">
                     <label className="login-footer-label">IEEE - VBIT SB | 2020 - 2021</label>

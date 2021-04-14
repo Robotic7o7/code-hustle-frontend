@@ -1,7 +1,8 @@
 .bid-page{
-    height:90vh;
+    height:100vh;
     width:100%;
     background-color:#fff;
+    position:relative;
 }
 
 .bid-section-top{
@@ -43,14 +44,16 @@ text-shadow: 0px 0px 4px rgba(173, 173, 173, 0.25);
 .bid-box{
     display:flex;
     flex-direction:column;
-    height:40vh;
+    height:auto;
     width:50vw;
     align-items:center;
     justify-content:center;
     background-color:#FFFFFF;
     border-radius:5px;
     position:relative;
-    top:-20vh;
+    top:-0vh;
+    box-sizing:border-box;
+    padding:40px;
     background: #FFFFFF;
     box-shadow: 2px 4px 10px rgba(143, 131, 131, 0.25)
 
@@ -81,9 +84,9 @@ text-shadow: 0px 0px 4px rgba(173, 173, 173, 0.25);
 
 .bid-footer{
     background-color:#fff;
-    height:10vh;
+    height:auto;
     width:100%;
-    position:absolute;
+    position:relative;
     bottom:0;
     display:grid;
     place-items:center;

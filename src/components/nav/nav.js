@@ -40,7 +40,7 @@ function Nav(props) {
                     <img className="sb-logo" src="/FinalLogo1.png" />
                 </div>
                 <div className="nav-bar-right-container">
-                    <a href="" className="nav-links">HOME</a>
+                    <a href="/home" className="nav-links">HOME</a>
                     <Link to="/bid" className="nav-links">BID</Link>
                     <Link to="/leader-board" className="nav-links">LEADERBOARD</Link>
                     <Link to="/" className="nav-links">LOGIN</Link>
@@ -56,7 +56,7 @@ function Nav(props) {
                     <img className="sb-logo" src="/FinalLogo1.png" />
                 </div>
                 <div className="nav-bar-right-container">
-                    <a href="" className="nav-links">HOME</a>
+                    <a href="/home" className="nav-links">HOME</a>
                     <Link to="/bid" className="nav-links">BID</Link>
                     <Link to="/leader-board" className="nav-links">LEADERBOARD</Link>
                     <a href to="/" className="nav-links"><b>{props.displayName}</b></a>
