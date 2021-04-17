@@ -27,15 +27,23 @@ function BidPage(props) {
         })
             .then(response => response.json())
             .then(data => {
-                console.log("wallet amount from bid page" + data);
-                var updatedAmount = parseInt(data) - parseInt(bidValue)
-                if (updatedAmount > 0) {
-                    var finalAmount = updatedAmount.toString();
-                    updateWallet(finalAmount)
-                }
-                else {
+                console.log("wallet amount from bid page" + data.teamWallet);
+                if (parseInt(data.teamWallet) === 0) {
                     alert("Oops! seems like you're broke. You have insufficient coins, bid cannot be placed");
                     window.location.href = "/locked";
+                }
+                else {
+                    var updatedAmount = parseInt(data.teamWallet) - parseInt(bidValue)
+                    console.log("updated Amount" + updatedAmount);
+                    if (updatedAmount >= 0) {
+                        var finalAmount = updatedAmount.toString();
+                        updateWallet(finalAmount)
+                    }
+                    else {
+
+                        alert("You have insufficient funds to bid " + bidValue + " Coins, kindly resubmit bid Value");
+
+                    }
                 }
 
             })

@@ -26,7 +26,7 @@ function Nav(props) {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }, [])
+    }, [props.wallet])
 
 
 
@@ -58,7 +58,7 @@ function Nav(props) {
                     <Link to="/bid" className="nav-links">BID</Link>
                     <Link to="/leader-board" className="nav-links">LEADERBOARD</Link>
                     <a href to="/" className="nav-links"><b>{props.displayName}</b></a>
-                    <a href to="/bid" className="nav-links"><b>Coins: {props.wallet}</b></a>
+                    <a href to="/bid" className="nav-links"><b>Coins:{props.wallet}</b></a>
                 </div>
             </div>
         )
