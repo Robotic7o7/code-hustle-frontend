@@ -123,6 +123,12 @@ function BidPage(props) {
             document.getElementById('bid').style.border = "1px solid red";
         }
 
+        if (parseInt(bidValue) < 0) {
+            validated = 0;
+            document.getElementById('bid').style.border = "1px solid red";
+            alert("Bid value cannot be negative");
+        }
+
         if (validated == 1) {
             calcWallet();
         }
