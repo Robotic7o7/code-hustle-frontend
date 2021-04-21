@@ -79,7 +79,7 @@ function LoginPage(props) {
                     <br />
                     <label className='login-page-title'>CODE HUSTLE 2.0</label>
                     <div className="login-box">
-                        <input className="login-input-field" id="name" placeholder="ENTER TEAM NAME" onChange={e => { e.preventDefault(); setName(e.target.value); revertStyle() }} />
+                        <input className="login-input-field" id="name" placeholder="ENTER TEAM CODE" onChange={e => { e.preventDefault(); setName(e.target.value); revertStyle() }} />
                         <input className="login-input-field" id="passKey" placeholder="ENTER PASS KEY" onChange={e => { e.preventDefault(); setPassKey(e.target.value); revertStyle() }} />
                         <button className="submit-button" onClick={Submit}>LOGIN</button>
                     </div>
