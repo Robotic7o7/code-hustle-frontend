@@ -51,9 +51,9 @@ function LeaderBoard(props) {
                             </div>)}
                     </div>
                 </div>
-                <div className="leader-board-footer">
+                {/* <div className="leader-board-footer">
                     <label className="leader-board-footer-label">IEEE - VBIT SB | 2020 - 2021</label>
-                </div>
+                </div>*/}
             </div>
         )
     }

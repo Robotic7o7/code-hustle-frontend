@@ -8,6 +8,7 @@ import LoginPage from './pages/login-page/login-page';
 import BidPage from './pages/bid-page/bid';
 import LeaderBoard from './pages/leader-board/leader-board';
 import LockedPage from './pages/locked-page/locked';
+import TeamBids from './pages/team-bids/team-bids';
 
 
 
@@ -64,6 +65,14 @@ function App() {
           </Route>
           <Route path="/leader-board">
             <LeaderBoard
+              loggedIn={loggedIn}
+              setLoggedIn={setLoggedIn}
+
+              setDisplayName={setDisplayName}
+            />
+          </Route>
+          <Route path="/bid-board">
+            <TeamBids
               loggedIn={loggedIn}
               setLoggedIn={setLoggedIn}
 
