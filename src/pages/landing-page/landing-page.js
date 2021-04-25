@@ -30,7 +30,7 @@ function LandingPage(props) {
                     <div className="landing-countup-container">
                         <div className="count-up-bar">
                             <div className="count-up-area">
-                                <CountUp className="count-label" delay={2} end={25} duration={25} />
+                                <CountUp className="count-label" delay={2} end={33} duration={25} />
                                 <div className="count-text-label">TEAMS</div>
                             </div>
                             <div className="count-up-area">

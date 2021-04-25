@@ -11,7 +11,7 @@ function LockedPage() {
     }, [])
 
     function redirectFeedback() {
-        window.location.href = "https://instagram.com";
+        window.location.href = "http://bit.ly/FeedbackCH2";
         clearTimeout();
     }
 
