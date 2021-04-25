@@ -7,6 +7,7 @@ function LeaderBoard(props) {
 
     const [teams, setTeams] = useState('')
     const [sortedTeams, setSortedTeams] = useState('')
+    const [final, setFinal] = useState('')
 
 
     useEffect(() => {
@@ -14,9 +15,27 @@ function LeaderBoard(props) {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                setTeams(data);
-                sortTable();
-                console.log(sortedTeams)
+                const Sort = data;
+                for (var j = 0; j < data.length; j++) {
+                    for (var i = 0; i < (Sort.length - 1); i++) {
+                        var temp;
+                        let a = Sort[i].teamWallet;
+                        let b = Sort[i + 1].teamWallet;
+                        if (a > b) {
+                            temp = Sort[i];
+                            Sort[i] = Sort[i + 1];
+                            Sort[i + 1] = temp;
+                        }
+                    }
+                }
+                console.log(Sort)
+                setTeams(Sort);
+                console.log(teams)
+                // setTeams(data);
+                // console.log(teams);
+                // setSortedTeams(data);
+                // sortTable();
+                // console.log(sortedTeams)
             });
 
     }, [])
@@ -54,7 +73,7 @@ function LeaderBoard(props) {
     }
 
 
-    if (!sortedTeams) {
+    if (!teams) {
         return (<div> Loading...</div>)
     }
 
@@ -80,11 +99,11 @@ function LeaderBoard(props) {
                             <span className="leader-board-item bg-grey" ><b>TEAM WALLET</b></span>
                         </div>
 
-                        {sortedTeams.map((sortedteam, item) =>
+                        {teams.map((team, item) =>
                             <div className="leader-board-row">
-                                <span className="leader-board-item" >{sortedteam.teamName}</span>
-                                <span className="leader-board-item" >{sortedteam.teamCode}</span>
-                                <span className="leader-board-item" >{sortedteam.teamWallet}</span>
+                                <span className="leader-board-item" >{team.teamName}</span>
+                                <span className="leader-board-item" >{team.teamCode}</span>
+                                <span className="leader-board-item" >{team.teamWallet}</span>
                             </div>)}
                     </div>
 
