@@ -37,9 +37,9 @@ function TeamBids() {
                     </div>
                     {teamBids.map((teamBid, item) =>
                         <div className="team-bid-row">
-                            <span className="team-bid-item" >{teamBids.teamCode}</span>
-                            <span className="team-bid-item" >{teamBids.questionNo}</span>
-                            <span className="team-bid-item" >{teamBids.bidAmount}</span>
+                            <span className="team-bid-item" >{teamBid.teamCode}</span>
+                            <span className="team-bid-item" >{teamBid.questionNo}</span>
+                            <span className="team-bid-item" >{teamBid.bidAmount}</span>
                         </div>)}
                 </div>
             </div>

@@ -16,16 +16,15 @@ function LeaderBoard(props) {
             .then(data => {
                 console.log(data)
                 const Sort = data;
-                for (var j = 0; j < data.length; j++) {
-                    for (var i = 0; i < (Sort.length - 1); i++) {
+                for (var i = 0; i < (Sort.length - 1); i++) {
+                    for (var k = 0; k < i; k++)
                         var temp;
-                        let a = Sort[i].teamWallet;
-                        let b = Sort[i + 1].teamWallet;
-                        if (a > b) {
-                            temp = Sort[i];
-                            Sort[i] = Sort[i + 1];
-                            Sort[i + 1] = temp;
-                        }
+                    let a = Sort[k].teamWallet;
+                    let b = Sort[k + 1].teamWallet;
+                    if (a > b) {
+                        temp = Sort[k];
+                        Sort[k] = Sort[k + 1];
+                        Sort[k + 1] = temp;
                     }
                 }
                 console.log(Sort)
@@ -45,18 +44,19 @@ function LeaderBoard(props) {
         const Sort = teams;
         console.log(Sort);
         // Iterate over the property names:
-        for (var j = 0; j < teams.length; j++) {
-            for (var i = 0; i < (Sort.length - 1); i++) {
+        // for (var j = 0; j < teams.length; j++) {
+        for (var i = 0; i < (Sort.length - 1); i++) {
+            for (var k = 0; k < i; k++)
                 var temp;
-                let a = Sort[i].teamWallet;
-                let b = Sort[i + 1].teamWallet;
-                if (a > b) {
-                    temp = Sort[i];
-                    Sort[i] = Sort[i + 1];
-                    Sort[i + 1] = temp;
-                }
+            let a = Sort[k].teamWallet;
+            let b = Sort[k + 1].teamWallet;
+            if (a > b) {
+                temp = Sort[k];
+                Sort[k] = Sort[k + 1];
+                Sort[k + 1] = temp;
             }
         }
+        // }
         console.log(Sort);
         setSortedTeams(Sort)
         // let sortedTeams = [...teamsSort];
