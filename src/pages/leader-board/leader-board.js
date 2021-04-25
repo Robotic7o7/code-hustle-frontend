@@ -31,7 +31,7 @@ function LeaderBoard(props) {
                 var temp;
                 let a = Sort[i].teamWallet;
                 let b = Sort[i + 1].teamWallet;
-                if (a < b) {
+                if (a > b) {
                     temp = Sort[i];
                     Sort[i] = Sort[i + 1];
                     Sort[i + 1] = temp;
